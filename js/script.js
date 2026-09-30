@@ -11,3 +11,11 @@ window.addEventListener('scroll', () => {
 document.querySelectorAll('.faq-q').forEach(q => {
   q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
 });
+// Гамбургер
+const burger = document.getElementById('burger');
+if (burger) {
+  burger.addEventListener('click', () => document.getElementById('nav').classList.toggle('open'));
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('nav').classList.remove('open'));
+  });
+}
